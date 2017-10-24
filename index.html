@@ -16,10 +16,20 @@
       var age = document.getElementById('age').value;
       if(age > 17){
         alert('Vous êtes majeur !');
-      }else {
+      }else if(age < 18 && age >0){
         alert('Vous êtes mineur');
+      }else {
+        alert('Tu te fiche de moi ?!')
       }
     }
+
+    //Focus un champ de texte
+    function loadFocus(){
+    // le nom, de l'id + .focus a la place de .value
+    document.getElementById('age').focus();
+  }
+   // Au dehors de la fonction
+    window.onload = loadFocus;
     </script>
   </body>
 </html>
